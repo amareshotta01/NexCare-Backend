@@ -1,7 +1,11 @@
 const express = require("express");
 const res = require("express/lib/response");
+const connectDB = require('./config/db')
+
 const app = express();
 const port = process.env.PORT || 5000;
+
+connectDB();
 
 app.use(express.json());
 
